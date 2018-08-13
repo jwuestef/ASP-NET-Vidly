@@ -19,5 +19,9 @@ namespace Vidly.Models
         public byte DurationInMonths { get; set; }
 
         public byte DiscountRate { get; set; }
+
+        // These are here to stop us using 0 and 1 in the code. Could use an enum too, but it would be a little more complicated... easier to do this
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsYouGo = 1;
     }
 }
