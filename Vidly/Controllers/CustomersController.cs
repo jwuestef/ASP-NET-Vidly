@@ -29,8 +29,9 @@ namespace Vidly.Controllers
         public ViewResult Index()
         {
             //var customers = _context.Customers;   // Deferred execution, it is not queried immediately... until it is iterated over in the View
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();   // Immediate execution - Requires System.Data.Entity;
-            return View(customers);
+            //var customers = _context.Customers.Include(c => c.MembershipType).ToList();   // Immediate execution - Requires System.Data.Entity;
+            //return View(customers);
+            return View();
         }
 
 
